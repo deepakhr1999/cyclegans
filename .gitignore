@@ -1,0 +1,7 @@
+.vscode/*
+**/.ipynb_checkpoints/*
+**/__pycache__/
+**/*_logs/
+**/debug.log
+**/.vs
+.vscode
