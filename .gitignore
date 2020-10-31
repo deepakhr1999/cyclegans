@@ -5,3 +5,5 @@
 **/debug.log
 **/.vs
 .vscode
+**.ckpt
+images/
