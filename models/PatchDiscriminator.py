@@ -10,7 +10,7 @@ class DiscConvBlock(nn.Module):
             nn.LeakyReLU(0.2, True),
         )
         if is_first: # remove the second element
-            block = block[0], block[1]
+            block = block[0], block[2]
         self.block = nn.Sequential(*block)
         
     def forward(self, x):
