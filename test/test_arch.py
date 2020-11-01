@@ -13,15 +13,14 @@ import torch
 import os
 from models import ResnetGenerator, PatchDiscriminator
 from models.utils import init_weights
-torch.manual_seed(0)
 
 
 def get_nets():
     torch.manual_seed(0)
-    genX = ResnetGenerator.get_generator().cuda()
+    genX = ResnetGenerator.get_generator()
     init_weights(genX)
 
-    disY = PatchDiscriminator.get_model().cuda()
+    disY = PatchDiscriminator.get_model()
     init_weights(disY)
 
     return genX, disY
@@ -30,7 +29,7 @@ def get_tensors():
     dirname = os.path.dirname(__file__)
     filename = dirname + '/test_files/input.pt'
     
-    x = torch.load(filename).cuda()
+    x = torch.load(filename)
 
     filename = filename = dirname + '/test_files/output.pt'
     targetY, targetZ = torch.load(filename)

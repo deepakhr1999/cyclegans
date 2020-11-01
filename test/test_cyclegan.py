@@ -5,7 +5,6 @@ import unittest
 import torch
 import os
 from models.CycleGan import CycleGan
-torch.manual_seed(0)
 
 def numel(net):
     return sum(p.numel() for p in net.parameters())
