@@ -1,0 +1,11 @@
+body{
+    background-color: #3E4551;
+}
+
+.main{
+    width: 100%;
+}
+
+.navbar{
+    box-shadow: none;
+}
