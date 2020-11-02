@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+    <style>
+        body{
+            background-color: #3E4551;
+        }
+
+        .main{
+            width: 100%;
+        }
+
+        .navbar{
+            box-shadow: none;
+        }
+    </style>
+</head>
+<body>
+    <nav class="mb-0 navbar navbar-expand-lg navbar-dark justify-content-center">
+        <a class="navbar-brand" href="#">Monet2Photo using Cycle Gans</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </nav>
+ 
+
+    
+    <div class="main my-5">
+        <h6 class="text-white text-center">00010.jpg</h6>
+        <div class='d-flex justify-content-center w-100 mb-3'>
+            <div class="mx-2 text-center">
+                <img id='imga' class='mx-4'
+                src="images/testA/00010.jpg" alt=""><br>
+            </div>
+
+            <div class="mx-2 text-center">
+                <img id='imgb'
+                class='mx-4' src="images/fakeB/00010.jpg" alt=""><br>
+            </div>
+        </div>
+    </div>
+    
+    <div class="main my-5">
+        <h6 class="text-white text-center">00020.jpg</h6>
+        <div class='d-flex justify-content-center w-100 mb-3'>
+            <div class="mx-2 text-center">
+                <img id='imga' class='mx-4'
+                src="images/testA/00020.jpg" alt=""><br>
+            </div>
+
+            <div class="mx-2 text-center">
+                <img id='imgb'
+                class='mx-4' src="images/fakeB/00020.jpg" alt=""><br>
+            </div>
+        </div>
+    </div>
+    
+    <div class="main my-5">
+        <h6 class="text-white text-center">00030.jpg</h6>
+        <div class='d-flex justify-content-center w-100 mb-3'>
+            <div class="mx-2 text-center">
+                <img id='imga' class='mx-4'
+                src="images/testA/00030.jpg" alt=""><br>
+            </div>
+
+            <div class="mx-2 text-center">
+                <img id='imgb'
+                class='mx-4' src="images/fakeB/00030.jpg" alt=""><br>
+            </div>
+        </div>
+    </div>
+    
+    <div class="main my-5">
+        <h6 class="text-white text-center">00070.jpg</h6>
+        <div class='d-flex justify-content-center w-100 mb-3'>
+            <div class="mx-2 text-center">
+                <img id='imga' class='mx-4'
+                src="images/testA/00070.jpg" alt=""><br>
+            </div>
+
+            <div class="mx-2 text-center">
+                <img id='imgb'
+                class='mx-4' src="images/fakeB/00070.jpg" alt=""><br>
+            </div>
+        </div>
+    </div>
+    
+    <div class="main my-5">
+        <h6 class="text-white text-center">00130.jpg</h6>
+        <div class='d-flex justify-content-center w-100 mb-3'>
+            <div class="mx-2 text-center">
+                <img id='imga' class='mx-4'
+                src="images/testA/00130.jpg" alt=""><br>
+            </div>
+
+            <div class="mx-2 text-center">
+                <img id='imgb'
+                class='mx-4' src="images/fakeB/00130.jpg" alt=""><br>
+            </div>
+        </div>
+    </div>
+    
+    <div class="main my-5">
+        <h6 class="text-white text-center">00140.jpg</h6>
+        <div class='d-flex justify-content-center w-100 mb-3'>
+            <div class="mx-2 text-center">
+                <img id='imga' class='mx-4'
+                src="images/testA/00140.jpg" alt=""><br>
+            </div>
+
+            <div class="mx-2 text-center">
+                <img id='imgb'
+                class='mx-4' src="images/fakeB/00140.jpg" alt=""><br>
+            </div>
+        </div>
+    </div>
+    
+    <div class="main my-5">
+        <h6 class="text-white text-center">00150.jpg</h6>
+        <div class='d-flex justify-content-center w-100 mb-3'>
+            <div class="mx-2 text-center">
+                <img id='imga' class='mx-4'
+                src="images/testA/00150.jpg" alt=""><br>
+            </div>
+
+            <div class="mx-2 text-center">
+                <img id='imgb'
+                class='mx-4' src="images/fakeB/00150.jpg" alt=""><br>
+            </div>
+        </div>
+    </div>
+    
+    <div class="main my-5">
+        <h6 class="text-white text-center">00170.jpg</h6>
+        <div class='d-flex justify-content-center w-100 mb-3'>
+            <div class="mx-2 text-center">
+                <img id='imga' class='mx-4'
+                src="images/testA/00170.jpg" alt=""><br>
+            </div>
+
+            <div class="mx-2 text-center">
+                <img id='imgb'
+                class='mx-4' src="images/fakeB/00170.jpg" alt=""><br>
+            </div>
+        </div>
+    </div>
+    
+    <div class="main my-5">
+        <h6 class="text-white text-center">00180.jpg</h6>
+        <div class='d-flex justify-content-center w-100 mb-3'>
+            <div class="mx-2 text-center">
+                <img id='imga' class='mx-4'
+                src="images/testA/00180.jpg" alt=""><br>
+            </div>
+
+            <div class="mx-2 text-center">
+                <img id='imgb'
+                class='mx-4' src="images/fakeB/00180.jpg" alt=""><br>
+            </div>
+        </div>
+    </div>
+    
+    <div class="main my-5">
+        <h6 class="text-white text-center">00190.jpg</h6>
+        <div class='d-flex justify-content-center w-100 mb-3'>
+            <div class="mx-2 text-center">
+                <img id='imga' class='mx-4'
+                src="images/testA/00190.jpg" alt=""><br>
+            </div>
+
+            <div class="mx-2 text-center">
+                <img id='imgb'
+                class='mx-4' src="images/fakeB/00190.jpg" alt=""><br>
+            </div>
+        </div>
+    </div>
+    
+    <div class="main my-5">
+        <h6 class="text-white text-center">00270.jpg</h6>
+        <div class='d-flex justify-content-center w-100 mb-3'>
+            <div class="mx-2 text-center">
+                <img id='imga' class='mx-4'
+                src="images/testA/00270.jpg" alt=""><br>
+            </div>
+
+            <div class="mx-2 text-center">
+                <img id='imgb'
+                class='mx-4' src="images/fakeB/00270.jpg" alt=""><br>
+            </div>
+        </div>
+    </div>
+    
+    <div class="main my-5">
+        <h6 class="text-white text-center">00360.jpg</h6>
+        <div class='d-flex justify-content-center w-100 mb-3'>
+            <div class="mx-2 text-center">
+                <img id='imga' class='mx-4'
+                src="images/testA/00360.jpg" alt=""><br>
+            </div>
+
+            <div class="mx-2 text-center">
+                <img id='imgb'
+                class='mx-4' src="images/fakeB/00360.jpg" alt=""><br>
+            </div>
+        </div>
+    </div>
+    
+    <div class="main my-5">
+        <h6 class="text-white text-center">00380.jpg</h6>
+        <div class='d-flex justify-content-center w-100 mb-3'>
+            <div class="mx-2 text-center">
+                <img id='imga' class='mx-4'
+                src="images/testA/00380.jpg" alt=""><br>
+            </div>
+
+            <div class="mx-2 text-center">
+                <img id='imgb'
+                class='mx-4' src="images/fakeB/00380.jpg" alt=""><br>
+            </div>
+        </div>
+    </div>
+    
+    <div class="main my-5">
+        <h6 class="text-white text-center">00390.jpg</h6>
+        <div class='d-flex justify-content-center w-100 mb-3'>
+            <div class="mx-2 text-center">
+                <img id='imga' class='mx-4'
+                src="images/testA/00390.jpg" alt=""><br>
+            </div>
+
+            <div class="mx-2 text-center">
+                <img id='imgb'
+                class='mx-4' src="images/fakeB/00390.jpg" alt=""><br>
+            </div>
+        </div>
+    </div>
+    
+    <div class="main my-5">
+        <h6 class="text-white text-center">00400.jpg</h6>
+        <div class='d-flex justify-content-center w-100 mb-3'>
+            <div class="mx-2 text-center">
+                <img id='imga' class='mx-4'
+                src="images/testA/00400.jpg" alt=""><br>
+            </div>
+
+            <div class="mx-2 text-center">
+                <img id='imgb'
+                class='mx-4' src="images/fakeB/00400.jpg" alt=""><br>
+            </div>
+        </div>
+    </div>
+    
+    <div class="main my-5">
+        <h6 class="text-white text-center">00410.jpg</h6>
+        <div class='d-flex justify-content-center w-100 mb-3'>
+            <div class="mx-2 text-center">
+                <img id='imga' class='mx-4'
+                src="images/testA/00410.jpg" alt=""><br>
+            </div>
+
+            <div class="mx-2 text-center">
+                <img id='imgb'
+                class='mx-4' src="images/fakeB/00410.jpg" alt=""><br>
+            </div>
+        </div>
+    </div>
+    
+    <div class="main my-5">
+        <h6 class="text-white text-center">00430.jpg</h6>
+        <div class='d-flex justify-content-center w-100 mb-3'>
+            <div class="mx-2 text-center">
+                <img id='imga' class='mx-4'
+                src="images/testA/00430.jpg" alt=""><br>
+            </div>
+
+            <div class="mx-2 text-center">
+                <img id='imgb'
+                class='mx-4' src="images/fakeB/00430.jpg" alt=""><br>
+            </div>
+        </div>
+    </div>
+    
+    <div class="main my-5">
+        <h6 class="text-white text-center">00480.jpg</h6>
+        <div class='d-flex justify-content-center w-100 mb-3'>
+            <div class="mx-2 text-center">
+                <img id='imga' class='mx-4'
+                src="images/testA/00480.jpg" alt=""><br>
+            </div>
+
+            <div class="mx-2 text-center">
+                <img id='imgb'
+                class='mx-4' src="images/fakeB/00480.jpg" alt=""><br>
+            </div>
+        </div>
+    </div>
+    
+    <div class="main my-5">
+        <h6 class="text-white text-center">00490.jpg</h6>
+        <div class='d-flex justify-content-center w-100 mb-3'>
+            <div class="mx-2 text-center">
+                <img id='imga' class='mx-4'
+                src="images/testA/00490.jpg" alt=""><br>
+            </div>
+
+            <div class="mx-2 text-center">
+                <img id='imgb'
+                class='mx-4' src="images/fakeB/00490.jpg" alt=""><br>
+            </div>
+        </div>
+    </div>
+    
+    <div class="main my-5">
+        <h6 class="text-white text-center">00500.jpg</h6>
+        <div class='d-flex justify-content-center w-100 mb-3'>
+            <div class="mx-2 text-center">
+                <img id='imga' class='mx-4'
+                src="images/testA/00500.jpg" alt=""><br>
+            </div>
+
+            <div class="mx-2 text-center">
+                <img id='imgb'
+                class='mx-4' src="images/fakeB/00500.jpg" alt=""><br>
+            </div>
+        </div>
+    </div>
+    
+    <div class="main my-5">
+        <h6 class="text-white text-center">00520.jpg</h6>
+        <div class='d-flex justify-content-center w-100 mb-3'>
+            <div class="mx-2 text-center">
+                <img id='imga' class='mx-4'
+                src="images/testA/00520.jpg" alt=""><br>
+            </div>
+
+            <div class="mx-2 text-center">
+                <img id='imgb'
+                class='mx-4' src="images/fakeB/00520.jpg" alt=""><br>
+            </div>
+        </div>
+    </div>
+    
+    <div class="main my-5">
+        <h6 class="text-white text-center">00610.jpg</h6>
+        <div class='d-flex justify-content-center w-100 mb-3'>
+            <div class="mx-2 text-center">
+                <img id='imga' class='mx-4'
+                src="images/testA/00610.jpg" alt=""><br>
+            </div>
+
+            <div class="mx-2 text-center">
+                <img id='imgb'
+                class='mx-4' src="images/fakeB/00610.jpg" alt=""><br>
+            </div>
+        </div>
+    </div>
+    
+    <div class="main my-5">
+        <h6 class="text-white text-center">00670.jpg</h6>
+        <div class='d-flex justify-content-center w-100 mb-3'>
+            <div class="mx-2 text-center">
+                <img id='imga' class='mx-4'
+                src="images/testA/00670.jpg" alt=""><br>
+            </div>
+
+            <div class="mx-2 text-center">
+                <img id='imgb'
+                class='mx-4' src="images/fakeB/00670.jpg" alt=""><br>
+            </div>
+        </div>
+    </div>
+    
+    <div class="main my-5">
+        <h6 class="text-white text-center">00700.jpg</h6>
+        <div class='d-flex justify-content-center w-100 mb-3'>
+            <div class="mx-2 text-center">
+                <img id='imga' class='mx-4'
+                src="images/testA/00700.jpg" alt=""><br>
+            </div>
+
+            <div class="mx-2 text-center">
+                <img id='imgb'
+                class='mx-4' src="images/fakeB/00700.jpg" alt=""><br>
+            </div>
+        </div>
+    </div>
+    
+    <div class="main my-5">
+        <h6 class="text-white text-center">00710.jpg</h6>
+        <div class='d-flex justify-content-center w-100 mb-3'>
+            <div class="mx-2 text-center">
+                <img id='imga' class='mx-4'
+                src="images/testA/00710.jpg" alt=""><br>
+            </div>
+
+            <div class="mx-2 text-center">
+                <img id='imgb'
+                class='mx-4' src="images/fakeB/00710.jpg" alt=""><br>
+            </div>
+        </div>
+    </div>
+    
+    <div class="main my-5">
+        <h6 class="text-white text-center">00730.jpg</h6>
+        <div class='d-flex justify-content-center w-100 mb-3'>
+            <div class="mx-2 text-center">
+                <img id='imga' class='mx-4'
+                src="images/testA/00730.jpg" alt=""><br>
+            </div>
+
+            <div class="mx-2 text-center">
+                <img id='imgb'
+                class='mx-4' src="images/fakeB/00730.jpg" alt=""><br>
+            </div>
+        </div>
+    </div>
+    
+    <div class="main my-5">
+        <h6 class="text-white text-center">00740.jpg</h6>
+        <div class='d-flex justify-content-center w-100 mb-3'>
+            <div class="mx-2 text-center">
+                <img id='imga' class='mx-4'
+                src="images/testA/00740.jpg" alt=""><br>
+            </div>
+
+            <div class="mx-2 text-center">
+                <img id='imgb'
+                class='mx-4' src="images/fakeB/00740.jpg" alt=""><br>
+            </div>
+        </div>
+    </div>
+    
+    <div class="main my-5">
+        <h6 class="text-white text-center">00860.jpg</h6>
+        <div class='d-flex justify-content-center w-100 mb-3'>
+            <div class="mx-2 text-center">
+                <img id='imga' class='mx-4'
+                src="images/testA/00860.jpg" alt=""><br>
+            </div>
+
+            <div class="mx-2 text-center">
+                <img id='imgb'
+                class='mx-4' src="images/fakeB/00860.jpg" alt=""><br>
+            </div>
+        </div>
+    </div>
+    
+    <div class="main my-5">
+        <h6 class="text-white text-center">00890.jpg</h6>
+        <div class='d-flex justify-content-center w-100 mb-3'>
+            <div class="mx-2 text-center">
+                <img id='imga' class='mx-4'
+                src="images/testA/00890.jpg" alt=""><br>
+            </div>
+
+            <div class="mx-2 text-center">
+                <img id='imgb'
+                class='mx-4' src="images/fakeB/00890.jpg" alt=""><br>
+            </div>
+        </div>
+    </div>
+    
+    <div class="main my-5">
+        <h6 class="text-white text-center">00900.jpg</h6>
+        <div class='d-flex justify-content-center w-100 mb-3'>
+            <div class="mx-2 text-center">
+                <img id='imga' class='mx-4'
+                src="images/testA/00900.jpg" alt=""><br>
+            </div>
+
+            <div class="mx-2 text-center">
+                <img id='imgb'
+                class='mx-4' src="images/fakeB/00900.jpg" alt=""><br>
+            </div>
+        </div>
+    </div>
+    
+    <div class="main my-5">
+        <h6 class="text-white text-center">00910.jpg</h6>
+        <div class='d-flex justify-content-center w-100 mb-3'>
+            <div class="mx-2 text-center">
+                <img id='imga' class='mx-4'
+                src="images/testA/00910.jpg" alt=""><br>
+            </div>
+
+            <div class="mx-2 text-center">
+                <img id='imgb'
+                class='mx-4' src="images/fakeB/00910.jpg" alt=""><br>
+            </div>
+        </div>
+    </div>
+    
+    <div class="main my-5">
+        <h6 class="text-white text-center">00920.jpg</h6>
+        <div class='d-flex justify-content-center w-100 mb-3'>
+            <div class="mx-2 text-center">
+                <img id='imga' class='mx-4'
+                src="images/testA/00920.jpg" alt=""><br>
+            </div>
+
+            <div class="mx-2 text-center">
+                <img id='imgb'
+                class='mx-4' src="images/fakeB/00920.jpg" alt=""><br>
+            </div>
+        </div>
+    </div>
+    
+    <div class="main my-5">
+        <h6 class="text-white text-center">00930.jpg</h6>
+        <div class='d-flex justify-content-center w-100 mb-3'>
+            <div class="mx-2 text-center">
+                <img id='imga' class='mx-4'
+                src="images/testA/00930.jpg" alt=""><br>
+            </div>
+
+            <div class="mx-2 text-center">
+                <img id='imgb'
+                class='mx-4' src="images/fakeB/00930.jpg" alt=""><br>
+            </div>
+        </div>
+    </div>
+    
+    <div class="main my-5">
+        <h6 class="text-white text-center">00950.jpg</h6>
+        <div class='d-flex justify-content-center w-100 mb-3'>
+            <div class="mx-2 text-center">
+                <img id='imga' class='mx-4'
+                src="images/testA/00950.jpg" alt=""><br>
+            </div>
+
+            <div class="mx-2 text-center">
+                <img id='imgb'
+                class='mx-4' src="images/fakeB/00950.jpg" alt=""><br>
+            </div>
+        </div>
+    </div>
+    
+    <div class="main my-5">
+        <h6 class="text-white text-center">00960.jpg</h6>
+        <div class='d-flex justify-content-center w-100 mb-3'>
+            <div class="mx-2 text-center">
+                <img id='imga' class='mx-4'
+                src="images/testA/00960.jpg" alt=""><br>
+            </div>
+
+            <div class="mx-2 text-center">
+                <img id='imgb'
+                class='mx-4' src="images/fakeB/00960.jpg" alt=""><br>
+            </div>
+        </div>
+    </div>
+    
+    <div class="main my-5">
+        <h6 class="text-white text-center">00970.jpg</h6>
+        <div class='d-flex justify-content-center w-100 mb-3'>
+            <div class="mx-2 text-center">
+                <img id='imga' class='mx-4'
+                src="images/testA/00970.jpg" alt=""><br>
+            </div>
+
+            <div class="mx-2 text-center">
+                <img id='imgb'
+                class='mx-4' src="images/fakeB/00970.jpg" alt=""><br>
+            </div>
+        </div>
+    </div>
+    
+    <div class="main my-5">
+        <h6 class="text-white text-center">01000.jpg</h6>
+        <div class='d-flex justify-content-center w-100 mb-3'>
+            <div class="mx-2 text-center">
+                <img id='imga' class='mx-4'
+                src="images/testA/01000.jpg" alt=""><br>
+            </div>
+
+            <div class="mx-2 text-center">
+                <img id='imgb'
+                class='mx-4' src="images/fakeB/01000.jpg" alt=""><br>
+            </div>
+        </div>
+    </div>
+    
+    <div class="main my-5">
+        <h6 class="text-white text-center">01300.jpg</h6>
+        <div class='d-flex justify-content-center w-100 mb-3'>
+            <div class="mx-2 text-center">
+                <img id='imga' class='mx-4'
+                src="images/testA/01300.jpg" alt=""><br>
+            </div>
+
+            <div class="mx-2 text-center">
+                <img id='imgb'
+                class='mx-4' src="images/fakeB/01300.jpg" alt=""><br>
+            </div>
+        </div>
+    </div>
+    
+    <div class="main my-5">
+        <h6 class="text-white text-center">01330.jpg</h6>
+        <div class='d-flex justify-content-center w-100 mb-3'>
+            <div class="mx-2 text-center">
+                <img id='imga' class='mx-4'
+                src="images/testA/01330.jpg" alt=""><br>
+            </div>
+
+            <div class="mx-2 text-center">
+                <img id='imgb'
+                class='mx-4' src="images/fakeB/01330.jpg" alt=""><br>
+            </div>
+        </div>
+    </div>
+    
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+</body>
+</html>

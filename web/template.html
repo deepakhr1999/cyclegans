@@ -13,35 +13,45 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
     <!-- Material Design Bootstrap -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="static/main.css">
-    <script src="static/script.js"></script>
+    <style>
+        body{
+            background-color: #3E4551;
+        }
+
+        .main{
+            width: 100%;
+        }
+
+        .navbar{
+            box-shadow: none;
+        }
+    </style>
 </head>
 <body>
     <nav class="mb-0 navbar navbar-expand-lg navbar-dark justify-content-center">
-        <a class="navbar-brand" href="#">Monet2Photo Cycle Gans</a>
+        <a class="navbar-brand" href="#">Monet2Photo using Cycle Gans</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
     </nav>
  
-    <div class="main text-center">
-        <div class='d-flex justify-content-center' style="margin-top: 20vh; width: 100%;">
+
+    {% for block in blocks %}
+    <div class="main my-5">
+        <h6 class="text-white text-center">{{block.basename}}</h6>
+        <div class='d-flex justify-content-center w-100 mb-3'>
             <div class="mx-2 text-center">
                 <img id='imga' class='mx-4'
-                src="data:image/png;base64,{{testA}}" alt="{{pathA}}"><br>
-                <small>Monet</small>
+                src="{{block.testA}}" alt=""><br>
             </div>
 
             <div class="mx-2 text-center">
                 <img id='imgb'
-                class='mx-4' src="data:image/png;base64,{{testB}}" alt="{{pathB}}"><br>
-                <small>Photo</small>
+                class='mx-4' src="{{block.fakeB}}" alt=""><br>
             </div>
-            
         </div>
-        <button class="btn btn-primary" onclick='refresh_images()'>Refresh</button>
     </div>
-
+    {% endfor %}
     <!-- JQuery -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- Bootstrap tooltips -->
@@ -49,6 +59,5 @@
     <!-- Bootstrap core JavaScript -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
     <!-- MDB core JavaScript -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
 </body>
 </html>

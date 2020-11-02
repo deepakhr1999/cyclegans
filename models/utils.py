@@ -84,3 +84,23 @@ def set_requires_grad(nets, requires_grad):
     for net in nets:
         for param in net.parameters():
             param.requires_grad = requires_grad
+
+def load_weights(ckpt, net):
+    # load states
+    target_state = torch.load(ckpt)
+    current_state = net.state_dict()
+
+    # original state has dummy vars ending with these names
+    not_allowed = ('running_mean', 'running_var', 'num_batches_tracked')
+    is_valid = lambda x: not x.endswith(not_allowed)
+
+    # declare the keys on which we iterate
+    # note that state_dict is an Ordered_Dict
+    valid_keys = [key for key in target_state if is_valid(key)]
+    original_keys = [key for key in current_state]
+
+    # modify the state_dict using these keys
+    for i, j in zip(original_keys, valid_keys):
+        current_state[i] = target_state[j]
+
+    print(net.load_state_dict(current_state))

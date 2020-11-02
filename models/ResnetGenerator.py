@@ -60,8 +60,8 @@ def get_generator():
         *ConvBlock(128),
         *ConvBlock(256),
         
-        # six residual blocks
-        *[ResnetBlock(256) for i in range(6)],
+        # nine residual blocks
+        *[ResnetBlock(256) for i in range(9)],
         
         *ConvTranposeBlock(128),
         *ConvTranposeBlock(64),

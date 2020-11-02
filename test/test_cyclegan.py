@@ -14,7 +14,7 @@ net = CycleGan()
 class TestCycleGan(unittest.TestCase):
     def test_cg_nparams(self):        
         nparams = numel(net)
-        self.assertEqual(nparams, 10602436 * 2)
+        self.assertEqual(nparams, 14142916 * 2)
         
     def test_cg_output_shape(self):
         dirname = os.path.dirname(__file__)
