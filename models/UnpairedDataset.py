@@ -2,6 +2,7 @@ import os
 from torch.utils.data import Dataset
 from PIL import Image
 from torchvision import transforms
+from tqdm.notebook import tqdm
 
 data_transforms = {
     'train': transforms.Compose([
@@ -18,16 +19,21 @@ data_transforms = {
 
 
 class ImageFolder:
-    def __init__(self, root):
+    def __init__(self, root, transforms):
         self.root = root
         self.paths = os.listdir(root)
-        
+        self.images = []
+        for child in tqdm(self.paths):
+            full_path = os.path.join(self.root, child)
+            image = Image.open(full_path)
+            self.images.append( transforms(image) )
+            
     def __len__(self):
         return len(self.paths)
     
     def __getitem__(self, idx): #doesnt support slices, we dont want them
         idx = idx % len(self)
-        return os.path.join(self.root, self.paths[idx])
+        return os.path.join(self.root, self.paths[idx]), self.images[idx]
     
 
 class UnpairedDataset(Dataset):
@@ -39,13 +45,15 @@ class UnpairedDataset(Dataset):
         assert mode in 'train test'.split(), 'mode should be either train or test'
         
         super().__init__()
+        self.transforms = data_transforms[mode]
+        
         pathA = os.path.join(root, mode+"A")
-        self.dirA = ImageFolder(pathA)
+        self.dirA = ImageFolder(pathA, self.transforms)
         
         pathB = os.path.join(root, mode+"B")
-        self.dirB = ImageFolder(pathB)
+        self.dirB = ImageFolder(pathB, self.transforms)
     
-        self.transforms = data_transforms[mode]
+        
 
         print(f'Found {len(self.dirA)} images of {mode}A and {len(self.dirB)} images of {mode}B')
         
@@ -60,8 +68,8 @@ class UnpairedDataset(Dataset):
     
     def __getitem__(self, idx): #doesnt support slices, we dont want them
         # we use serial batching
-        pathA, imgA = self.load_image(self.dirA[idx])
-        pathB, imgB = self.load_image(self.dirB[idx])
+        pathA, imgA = self.dirA[idx]
+        pathB, imgB = self.dirB[idx]
         return {
             'A': imgA, 'pathA': pathA,
             'B': imgB, 'pathB': pathB
