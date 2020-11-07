@@ -15,7 +15,8 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
     <style>
         body{
-            background-color: #3E4551;
+            /* background-color: #3E4551;
+            width: 100%; */
         }
 
         .main{
@@ -27,31 +28,42 @@
         }
     </style>
 </head>
-<body>
-    <nav class="mb-0 navbar navbar-expand-lg navbar-dark justify-content-center">
-        <a class="navbar-brand" href="#">Monet2Photo using Cycle Gans</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-    </nav>
- 
-
-    {% for block in blocks %}
-    <div class="main my-5">
-        <h6 class="text-white text-center">{{block.basename}}</h6>
-        <div class='d-flex justify-content-center w-100 mb-3'>
-            <div class="mx-2 text-center">
-                <img id='imga' class='mx-4'
-                src="{{block.testA}}" alt=""><br>
-            </div>
-
-            <div class="mx-2 text-center">
-                <img id='imgb'
-                class='mx-4' src="{{block.fakeB}}" alt=""><br>
-            </div>
+<body class="elegant-color-dark">
+    <!--Navbar -->
+    <nav class="mb-1 navbar navbar-expand-lg navbar-dark elegant-color">
+        <a class="navbar-brand waves-effect waves-light" 
+        href="https://github.com/deepakhr1999/cyclegans">
+            <i class="fab fa-github"></i>         
+            Cyclegan
+        </a>
+        <ul class="navbar-nav ml-auto nav-flex-icons">
+            <li class="nav-item">
+                <a class="nav-link waves-effect waves-light"
+                href="http://efrosgans.eecs.berkeley.edu/cyclegan/pretrained_models/monet2photo.pth">
+                    <i class="fas fa-cloud-download-alt"></i>
+                    Official weights from berkeley.edu
+                </a>
+            </li>
+        </ul>
         </div>
-    </div>
-    {% endfor %}
+    </nav>
+  <!--/.Navbar -->
+    <table class="table table-borderless table-sm mx-auto" style="width: 512px;">
+        <thead>
+            <tr class="text-white">
+                <th class="text-center">Real Monet</th>
+                <th class="text-center">Generated photo</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for block in blocks %}
+            <tr>
+                <td><img src="{{block.testA}}" alt="monet image"></td>
+                <td><img src="{{block.fakeB}}" alt="generated image"></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
     <!-- JQuery -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- Bootstrap tooltips -->

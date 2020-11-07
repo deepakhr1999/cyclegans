@@ -15,7 +15,8 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
     <style>
         body{
-            background-color: #3E4551;
+            /* background-color: #3E4551;
+            width: 100%; */
         }
 
         .main{
@@ -27,601 +28,232 @@
         }
     </style>
 </head>
-<body>
-    <nav class="mb-0 navbar navbar-expand-lg navbar-dark justify-content-center">
-        <a class="navbar-brand" href="#">Monet2Photo using Cycle Gans</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+<body class="elegant-color-dark">
+    <!--Navbar -->
+    <nav class="mb-1 navbar navbar-expand-lg navbar-dark elegant-color">
+        <a class="navbar-brand waves-effect waves-light" 
+        href="https://github.com/deepakhr1999/cyclegans">
+            <i class="fab fa-github"></i>         
+            Cyclegan
+        </a>
+        <ul class="navbar-nav ml-auto nav-flex-icons">
+            <li class="nav-item">
+                <a class="nav-link waves-effect waves-light"
+                href="http://efrosgans.eecs.berkeley.edu/cyclegan/pretrained_models/monet2photo.pth">
+                    <i class="fas fa-cloud-download-alt"></i>
+                    Official weights from berkeley.edu
+                </a>
+            </li>
+        </ul>
+        </div>
     </nav>
- 
-
-    
-    <div class="main my-5">
-        <h6 class="text-white text-center">00010.jpg</h6>
-        <div class='d-flex justify-content-center w-100 mb-3'>
-            <div class="mx-2 text-center">
-                <img id='imga' class='mx-4'
-                src="images/testA/00010.jpg" alt=""><br>
-            </div>
-
-            <div class="mx-2 text-center">
-                <img id='imgb'
-                class='mx-4' src="images/fakeB/00010.jpg" alt=""><br>
-            </div>
-        </div>
-    </div>
-    
-    <div class="main my-5">
-        <h6 class="text-white text-center">00020.jpg</h6>
-        <div class='d-flex justify-content-center w-100 mb-3'>
-            <div class="mx-2 text-center">
-                <img id='imga' class='mx-4'
-                src="images/testA/00020.jpg" alt=""><br>
-            </div>
-
-            <div class="mx-2 text-center">
-                <img id='imgb'
-                class='mx-4' src="images/fakeB/00020.jpg" alt=""><br>
-            </div>
-        </div>
-    </div>
-    
-    <div class="main my-5">
-        <h6 class="text-white text-center">00030.jpg</h6>
-        <div class='d-flex justify-content-center w-100 mb-3'>
-            <div class="mx-2 text-center">
-                <img id='imga' class='mx-4'
-                src="images/testA/00030.jpg" alt=""><br>
-            </div>
-
-            <div class="mx-2 text-center">
-                <img id='imgb'
-                class='mx-4' src="images/fakeB/00030.jpg" alt=""><br>
-            </div>
-        </div>
-    </div>
-    
-    <div class="main my-5">
-        <h6 class="text-white text-center">00070.jpg</h6>
-        <div class='d-flex justify-content-center w-100 mb-3'>
-            <div class="mx-2 text-center">
-                <img id='imga' class='mx-4'
-                src="images/testA/00070.jpg" alt=""><br>
-            </div>
-
-            <div class="mx-2 text-center">
-                <img id='imgb'
-                class='mx-4' src="images/fakeB/00070.jpg" alt=""><br>
-            </div>
-        </div>
-    </div>
-    
-    <div class="main my-5">
-        <h6 class="text-white text-center">00130.jpg</h6>
-        <div class='d-flex justify-content-center w-100 mb-3'>
-            <div class="mx-2 text-center">
-                <img id='imga' class='mx-4'
-                src="images/testA/00130.jpg" alt=""><br>
-            </div>
-
-            <div class="mx-2 text-center">
-                <img id='imgb'
-                class='mx-4' src="images/fakeB/00130.jpg" alt=""><br>
-            </div>
-        </div>
-    </div>
-    
-    <div class="main my-5">
-        <h6 class="text-white text-center">00140.jpg</h6>
-        <div class='d-flex justify-content-center w-100 mb-3'>
-            <div class="mx-2 text-center">
-                <img id='imga' class='mx-4'
-                src="images/testA/00140.jpg" alt=""><br>
-            </div>
-
-            <div class="mx-2 text-center">
-                <img id='imgb'
-                class='mx-4' src="images/fakeB/00140.jpg" alt=""><br>
-            </div>
-        </div>
-    </div>
-    
-    <div class="main my-5">
-        <h6 class="text-white text-center">00150.jpg</h6>
-        <div class='d-flex justify-content-center w-100 mb-3'>
-            <div class="mx-2 text-center">
-                <img id='imga' class='mx-4'
-                src="images/testA/00150.jpg" alt=""><br>
-            </div>
-
-            <div class="mx-2 text-center">
-                <img id='imgb'
-                class='mx-4' src="images/fakeB/00150.jpg" alt=""><br>
-            </div>
-        </div>
-    </div>
-    
-    <div class="main my-5">
-        <h6 class="text-white text-center">00170.jpg</h6>
-        <div class='d-flex justify-content-center w-100 mb-3'>
-            <div class="mx-2 text-center">
-                <img id='imga' class='mx-4'
-                src="images/testA/00170.jpg" alt=""><br>
-            </div>
-
-            <div class="mx-2 text-center">
-                <img id='imgb'
-                class='mx-4' src="images/fakeB/00170.jpg" alt=""><br>
-            </div>
-        </div>
-    </div>
-    
-    <div class="main my-5">
-        <h6 class="text-white text-center">00180.jpg</h6>
-        <div class='d-flex justify-content-center w-100 mb-3'>
-            <div class="mx-2 text-center">
-                <img id='imga' class='mx-4'
-                src="images/testA/00180.jpg" alt=""><br>
-            </div>
-
-            <div class="mx-2 text-center">
-                <img id='imgb'
-                class='mx-4' src="images/fakeB/00180.jpg" alt=""><br>
-            </div>
-        </div>
-    </div>
-    
-    <div class="main my-5">
-        <h6 class="text-white text-center">00190.jpg</h6>
-        <div class='d-flex justify-content-center w-100 mb-3'>
-            <div class="mx-2 text-center">
-                <img id='imga' class='mx-4'
-                src="images/testA/00190.jpg" alt=""><br>
-            </div>
-
-            <div class="mx-2 text-center">
-                <img id='imgb'
-                class='mx-4' src="images/fakeB/00190.jpg" alt=""><br>
-            </div>
-        </div>
-    </div>
-    
-    <div class="main my-5">
-        <h6 class="text-white text-center">00270.jpg</h6>
-        <div class='d-flex justify-content-center w-100 mb-3'>
-            <div class="mx-2 text-center">
-                <img id='imga' class='mx-4'
-                src="images/testA/00270.jpg" alt=""><br>
-            </div>
-
-            <div class="mx-2 text-center">
-                <img id='imgb'
-                class='mx-4' src="images/fakeB/00270.jpg" alt=""><br>
-            </div>
-        </div>
-    </div>
-    
-    <div class="main my-5">
-        <h6 class="text-white text-center">00360.jpg</h6>
-        <div class='d-flex justify-content-center w-100 mb-3'>
-            <div class="mx-2 text-center">
-                <img id='imga' class='mx-4'
-                src="images/testA/00360.jpg" alt=""><br>
-            </div>
-
-            <div class="mx-2 text-center">
-                <img id='imgb'
-                class='mx-4' src="images/fakeB/00360.jpg" alt=""><br>
-            </div>
-        </div>
-    </div>
-    
-    <div class="main my-5">
-        <h6 class="text-white text-center">00380.jpg</h6>
-        <div class='d-flex justify-content-center w-100 mb-3'>
-            <div class="mx-2 text-center">
-                <img id='imga' class='mx-4'
-                src="images/testA/00380.jpg" alt=""><br>
-            </div>
-
-            <div class="mx-2 text-center">
-                <img id='imgb'
-                class='mx-4' src="images/fakeB/00380.jpg" alt=""><br>
-            </div>
-        </div>
-    </div>
-    
-    <div class="main my-5">
-        <h6 class="text-white text-center">00390.jpg</h6>
-        <div class='d-flex justify-content-center w-100 mb-3'>
-            <div class="mx-2 text-center">
-                <img id='imga' class='mx-4'
-                src="images/testA/00390.jpg" alt=""><br>
-            </div>
-
-            <div class="mx-2 text-center">
-                <img id='imgb'
-                class='mx-4' src="images/fakeB/00390.jpg" alt=""><br>
-            </div>
-        </div>
-    </div>
-    
-    <div class="main my-5">
-        <h6 class="text-white text-center">00400.jpg</h6>
-        <div class='d-flex justify-content-center w-100 mb-3'>
-            <div class="mx-2 text-center">
-                <img id='imga' class='mx-4'
-                src="images/testA/00400.jpg" alt=""><br>
-            </div>
-
-            <div class="mx-2 text-center">
-                <img id='imgb'
-                class='mx-4' src="images/fakeB/00400.jpg" alt=""><br>
-            </div>
-        </div>
-    </div>
-    
-    <div class="main my-5">
-        <h6 class="text-white text-center">00410.jpg</h6>
-        <div class='d-flex justify-content-center w-100 mb-3'>
-            <div class="mx-2 text-center">
-                <img id='imga' class='mx-4'
-                src="images/testA/00410.jpg" alt=""><br>
-            </div>
-
-            <div class="mx-2 text-center">
-                <img id='imgb'
-                class='mx-4' src="images/fakeB/00410.jpg" alt=""><br>
-            </div>
-        </div>
-    </div>
-    
-    <div class="main my-5">
-        <h6 class="text-white text-center">00430.jpg</h6>
-        <div class='d-flex justify-content-center w-100 mb-3'>
-            <div class="mx-2 text-center">
-                <img id='imga' class='mx-4'
-                src="images/testA/00430.jpg" alt=""><br>
-            </div>
-
-            <div class="mx-2 text-center">
-                <img id='imgb'
-                class='mx-4' src="images/fakeB/00430.jpg" alt=""><br>
-            </div>
-        </div>
-    </div>
-    
-    <div class="main my-5">
-        <h6 class="text-white text-center">00480.jpg</h6>
-        <div class='d-flex justify-content-center w-100 mb-3'>
-            <div class="mx-2 text-center">
-                <img id='imga' class='mx-4'
-                src="images/testA/00480.jpg" alt=""><br>
-            </div>
-
-            <div class="mx-2 text-center">
-                <img id='imgb'
-                class='mx-4' src="images/fakeB/00480.jpg" alt=""><br>
-            </div>
-        </div>
-    </div>
-    
-    <div class="main my-5">
-        <h6 class="text-white text-center">00490.jpg</h6>
-        <div class='d-flex justify-content-center w-100 mb-3'>
-            <div class="mx-2 text-center">
-                <img id='imga' class='mx-4'
-                src="images/testA/00490.jpg" alt=""><br>
-            </div>
-
-            <div class="mx-2 text-center">
-                <img id='imgb'
-                class='mx-4' src="images/fakeB/00490.jpg" alt=""><br>
-            </div>
-        </div>
-    </div>
-    
-    <div class="main my-5">
-        <h6 class="text-white text-center">00500.jpg</h6>
-        <div class='d-flex justify-content-center w-100 mb-3'>
-            <div class="mx-2 text-center">
-                <img id='imga' class='mx-4'
-                src="images/testA/00500.jpg" alt=""><br>
-            </div>
-
-            <div class="mx-2 text-center">
-                <img id='imgb'
-                class='mx-4' src="images/fakeB/00500.jpg" alt=""><br>
-            </div>
-        </div>
-    </div>
-    
-    <div class="main my-5">
-        <h6 class="text-white text-center">00520.jpg</h6>
-        <div class='d-flex justify-content-center w-100 mb-3'>
-            <div class="mx-2 text-center">
-                <img id='imga' class='mx-4'
-                src="images/testA/00520.jpg" alt=""><br>
-            </div>
-
-            <div class="mx-2 text-center">
-                <img id='imgb'
-                class='mx-4' src="images/fakeB/00520.jpg" alt=""><br>
-            </div>
-        </div>
-    </div>
-    
-    <div class="main my-5">
-        <h6 class="text-white text-center">00610.jpg</h6>
-        <div class='d-flex justify-content-center w-100 mb-3'>
-            <div class="mx-2 text-center">
-                <img id='imga' class='mx-4'
-                src="images/testA/00610.jpg" alt=""><br>
-            </div>
-
-            <div class="mx-2 text-center">
-                <img id='imgb'
-                class='mx-4' src="images/fakeB/00610.jpg" alt=""><br>
-            </div>
-        </div>
-    </div>
-    
-    <div class="main my-5">
-        <h6 class="text-white text-center">00670.jpg</h6>
-        <div class='d-flex justify-content-center w-100 mb-3'>
-            <div class="mx-2 text-center">
-                <img id='imga' class='mx-4'
-                src="images/testA/00670.jpg" alt=""><br>
-            </div>
-
-            <div class="mx-2 text-center">
-                <img id='imgb'
-                class='mx-4' src="images/fakeB/00670.jpg" alt=""><br>
-            </div>
-        </div>
-    </div>
-    
-    <div class="main my-5">
-        <h6 class="text-white text-center">00700.jpg</h6>
-        <div class='d-flex justify-content-center w-100 mb-3'>
-            <div class="mx-2 text-center">
-                <img id='imga' class='mx-4'
-                src="images/testA/00700.jpg" alt=""><br>
-            </div>
-
-            <div class="mx-2 text-center">
-                <img id='imgb'
-                class='mx-4' src="images/fakeB/00700.jpg" alt=""><br>
-            </div>
-        </div>
-    </div>
-    
-    <div class="main my-5">
-        <h6 class="text-white text-center">00710.jpg</h6>
-        <div class='d-flex justify-content-center w-100 mb-3'>
-            <div class="mx-2 text-center">
-                <img id='imga' class='mx-4'
-                src="images/testA/00710.jpg" alt=""><br>
-            </div>
-
-            <div class="mx-2 text-center">
-                <img id='imgb'
-                class='mx-4' src="images/fakeB/00710.jpg" alt=""><br>
-            </div>
-        </div>
-    </div>
-    
-    <div class="main my-5">
-        <h6 class="text-white text-center">00730.jpg</h6>
-        <div class='d-flex justify-content-center w-100 mb-3'>
-            <div class="mx-2 text-center">
-                <img id='imga' class='mx-4'
-                src="images/testA/00730.jpg" alt=""><br>
-            </div>
-
-            <div class="mx-2 text-center">
-                <img id='imgb'
-                class='mx-4' src="images/fakeB/00730.jpg" alt=""><br>
-            </div>
-        </div>
-    </div>
-    
-    <div class="main my-5">
-        <h6 class="text-white text-center">00740.jpg</h6>
-        <div class='d-flex justify-content-center w-100 mb-3'>
-            <div class="mx-2 text-center">
-                <img id='imga' class='mx-4'
-                src="images/testA/00740.jpg" alt=""><br>
-            </div>
-
-            <div class="mx-2 text-center">
-                <img id='imgb'
-                class='mx-4' src="images/fakeB/00740.jpg" alt=""><br>
-            </div>
-        </div>
-    </div>
-    
-    <div class="main my-5">
-        <h6 class="text-white text-center">00860.jpg</h6>
-        <div class='d-flex justify-content-center w-100 mb-3'>
-            <div class="mx-2 text-center">
-                <img id='imga' class='mx-4'
-                src="images/testA/00860.jpg" alt=""><br>
-            </div>
-
-            <div class="mx-2 text-center">
-                <img id='imgb'
-                class='mx-4' src="images/fakeB/00860.jpg" alt=""><br>
-            </div>
-        </div>
-    </div>
-    
-    <div class="main my-5">
-        <h6 class="text-white text-center">00890.jpg</h6>
-        <div class='d-flex justify-content-center w-100 mb-3'>
-            <div class="mx-2 text-center">
-                <img id='imga' class='mx-4'
-                src="images/testA/00890.jpg" alt=""><br>
-            </div>
-
-            <div class="mx-2 text-center">
-                <img id='imgb'
-                class='mx-4' src="images/fakeB/00890.jpg" alt=""><br>
-            </div>
-        </div>
-    </div>
-    
-    <div class="main my-5">
-        <h6 class="text-white text-center">00900.jpg</h6>
-        <div class='d-flex justify-content-center w-100 mb-3'>
-            <div class="mx-2 text-center">
-                <img id='imga' class='mx-4'
-                src="images/testA/00900.jpg" alt=""><br>
-            </div>
-
-            <div class="mx-2 text-center">
-                <img id='imgb'
-                class='mx-4' src="images/fakeB/00900.jpg" alt=""><br>
-            </div>
-        </div>
-    </div>
-    
-    <div class="main my-5">
-        <h6 class="text-white text-center">00910.jpg</h6>
-        <div class='d-flex justify-content-center w-100 mb-3'>
-            <div class="mx-2 text-center">
-                <img id='imga' class='mx-4'
-                src="images/testA/00910.jpg" alt=""><br>
-            </div>
-
-            <div class="mx-2 text-center">
-                <img id='imgb'
-                class='mx-4' src="images/fakeB/00910.jpg" alt=""><br>
-            </div>
-        </div>
-    </div>
-    
-    <div class="main my-5">
-        <h6 class="text-white text-center">00920.jpg</h6>
-        <div class='d-flex justify-content-center w-100 mb-3'>
-            <div class="mx-2 text-center">
-                <img id='imga' class='mx-4'
-                src="images/testA/00920.jpg" alt=""><br>
-            </div>
-
-            <div class="mx-2 text-center">
-                <img id='imgb'
-                class='mx-4' src="images/fakeB/00920.jpg" alt=""><br>
-            </div>
-        </div>
-    </div>
-    
-    <div class="main my-5">
-        <h6 class="text-white text-center">00930.jpg</h6>
-        <div class='d-flex justify-content-center w-100 mb-3'>
-            <div class="mx-2 text-center">
-                <img id='imga' class='mx-4'
-                src="images/testA/00930.jpg" alt=""><br>
-            </div>
-
-            <div class="mx-2 text-center">
-                <img id='imgb'
-                class='mx-4' src="images/fakeB/00930.jpg" alt=""><br>
-            </div>
-        </div>
-    </div>
-    
-    <div class="main my-5">
-        <h6 class="text-white text-center">00950.jpg</h6>
-        <div class='d-flex justify-content-center w-100 mb-3'>
-            <div class="mx-2 text-center">
-                <img id='imga' class='mx-4'
-                src="images/testA/00950.jpg" alt=""><br>
-            </div>
-
-            <div class="mx-2 text-center">
-                <img id='imgb'
-                class='mx-4' src="images/fakeB/00950.jpg" alt=""><br>
-            </div>
-        </div>
-    </div>
-    
-    <div class="main my-5">
-        <h6 class="text-white text-center">00960.jpg</h6>
-        <div class='d-flex justify-content-center w-100 mb-3'>
-            <div class="mx-2 text-center">
-                <img id='imga' class='mx-4'
-                src="images/testA/00960.jpg" alt=""><br>
-            </div>
-
-            <div class="mx-2 text-center">
-                <img id='imgb'
-                class='mx-4' src="images/fakeB/00960.jpg" alt=""><br>
-            </div>
-        </div>
-    </div>
-    
-    <div class="main my-5">
-        <h6 class="text-white text-center">00970.jpg</h6>
-        <div class='d-flex justify-content-center w-100 mb-3'>
-            <div class="mx-2 text-center">
-                <img id='imga' class='mx-4'
-                src="images/testA/00970.jpg" alt=""><br>
-            </div>
-
-            <div class="mx-2 text-center">
-                <img id='imgb'
-                class='mx-4' src="images/fakeB/00970.jpg" alt=""><br>
-            </div>
-        </div>
-    </div>
-    
-    <div class="main my-5">
-        <h6 class="text-white text-center">01000.jpg</h6>
-        <div class='d-flex justify-content-center w-100 mb-3'>
-            <div class="mx-2 text-center">
-                <img id='imga' class='mx-4'
-                src="images/testA/01000.jpg" alt=""><br>
-            </div>
-
-            <div class="mx-2 text-center">
-                <img id='imgb'
-                class='mx-4' src="images/fakeB/01000.jpg" alt=""><br>
-            </div>
-        </div>
-    </div>
-    
-    <div class="main my-5">
-        <h6 class="text-white text-center">01300.jpg</h6>
-        <div class='d-flex justify-content-center w-100 mb-3'>
-            <div class="mx-2 text-center">
-                <img id='imga' class='mx-4'
-                src="images/testA/01300.jpg" alt=""><br>
-            </div>
-
-            <div class="mx-2 text-center">
-                <img id='imgb'
-                class='mx-4' src="images/fakeB/01300.jpg" alt=""><br>
-            </div>
-        </div>
-    </div>
-    
-    <div class="main my-5">
-        <h6 class="text-white text-center">01330.jpg</h6>
-        <div class='d-flex justify-content-center w-100 mb-3'>
-            <div class="mx-2 text-center">
-                <img id='imga' class='mx-4'
-                src="images/testA/01330.jpg" alt=""><br>
-            </div>
-
-            <div class="mx-2 text-center">
-                <img id='imgb'
-                class='mx-4' src="images/fakeB/01330.jpg" alt=""><br>
-            </div>
-        </div>
-    </div>
-    
+  <!--/.Navbar -->
+    <table class="table table-borderless table-sm mx-auto" style="width: 512px;">
+        <thead>
+            <tr class="text-white">
+                <th class="text-center">Real Monet</th>
+                <th class="text-center">Generated photo</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr>
+                <td><img src="images/testA/00010.jpg" alt="monet image"></td>
+                <td><img src="images/fakeB/00010.jpg" alt="generated image"></td>
+            </tr>
+            
+            <tr>
+                <td><img src="images/testA/00020.jpg" alt="monet image"></td>
+                <td><img src="images/fakeB/00020.jpg" alt="generated image"></td>
+            </tr>
+            
+            <tr>
+                <td><img src="images/testA/00030.jpg" alt="monet image"></td>
+                <td><img src="images/fakeB/00030.jpg" alt="generated image"></td>
+            </tr>
+            
+            <tr>
+                <td><img src="images/testA/00070.jpg" alt="monet image"></td>
+                <td><img src="images/fakeB/00070.jpg" alt="generated image"></td>
+            </tr>
+            
+            <tr>
+                <td><img src="images/testA/00130.jpg" alt="monet image"></td>
+                <td><img src="images/fakeB/00130.jpg" alt="generated image"></td>
+            </tr>
+            
+            <tr>
+                <td><img src="images/testA/00140.jpg" alt="monet image"></td>
+                <td><img src="images/fakeB/00140.jpg" alt="generated image"></td>
+            </tr>
+            
+            <tr>
+                <td><img src="images/testA/00150.jpg" alt="monet image"></td>
+                <td><img src="images/fakeB/00150.jpg" alt="generated image"></td>
+            </tr>
+            
+            <tr>
+                <td><img src="images/testA/00170.jpg" alt="monet image"></td>
+                <td><img src="images/fakeB/00170.jpg" alt="generated image"></td>
+            </tr>
+            
+            <tr>
+                <td><img src="images/testA/00180.jpg" alt="monet image"></td>
+                <td><img src="images/fakeB/00180.jpg" alt="generated image"></td>
+            </tr>
+            
+            <tr>
+                <td><img src="images/testA/00190.jpg" alt="monet image"></td>
+                <td><img src="images/fakeB/00190.jpg" alt="generated image"></td>
+            </tr>
+            
+            <tr>
+                <td><img src="images/testA/00270.jpg" alt="monet image"></td>
+                <td><img src="images/fakeB/00270.jpg" alt="generated image"></td>
+            </tr>
+            
+            <tr>
+                <td><img src="images/testA/00360.jpg" alt="monet image"></td>
+                <td><img src="images/fakeB/00360.jpg" alt="generated image"></td>
+            </tr>
+            
+            <tr>
+                <td><img src="images/testA/00380.jpg" alt="monet image"></td>
+                <td><img src="images/fakeB/00380.jpg" alt="generated image"></td>
+            </tr>
+            
+            <tr>
+                <td><img src="images/testA/00390.jpg" alt="monet image"></td>
+                <td><img src="images/fakeB/00390.jpg" alt="generated image"></td>
+            </tr>
+            
+            <tr>
+                <td><img src="images/testA/00400.jpg" alt="monet image"></td>
+                <td><img src="images/fakeB/00400.jpg" alt="generated image"></td>
+            </tr>
+            
+            <tr>
+                <td><img src="images/testA/00410.jpg" alt="monet image"></td>
+                <td><img src="images/fakeB/00410.jpg" alt="generated image"></td>
+            </tr>
+            
+            <tr>
+                <td><img src="images/testA/00430.jpg" alt="monet image"></td>
+                <td><img src="images/fakeB/00430.jpg" alt="generated image"></td>
+            </tr>
+            
+            <tr>
+                <td><img src="images/testA/00480.jpg" alt="monet image"></td>
+                <td><img src="images/fakeB/00480.jpg" alt="generated image"></td>
+            </tr>
+            
+            <tr>
+                <td><img src="images/testA/00490.jpg" alt="monet image"></td>
+                <td><img src="images/fakeB/00490.jpg" alt="generated image"></td>
+            </tr>
+            
+            <tr>
+                <td><img src="images/testA/00500.jpg" alt="monet image"></td>
+                <td><img src="images/fakeB/00500.jpg" alt="generated image"></td>
+            </tr>
+            
+            <tr>
+                <td><img src="images/testA/00520.jpg" alt="monet image"></td>
+                <td><img src="images/fakeB/00520.jpg" alt="generated image"></td>
+            </tr>
+            
+            <tr>
+                <td><img src="images/testA/00610.jpg" alt="monet image"></td>
+                <td><img src="images/fakeB/00610.jpg" alt="generated image"></td>
+            </tr>
+            
+            <tr>
+                <td><img src="images/testA/00670.jpg" alt="monet image"></td>
+                <td><img src="images/fakeB/00670.jpg" alt="generated image"></td>
+            </tr>
+            
+            <tr>
+                <td><img src="images/testA/00700.jpg" alt="monet image"></td>
+                <td><img src="images/fakeB/00700.jpg" alt="generated image"></td>
+            </tr>
+            
+            <tr>
+                <td><img src="images/testA/00710.jpg" alt="monet image"></td>
+                <td><img src="images/fakeB/00710.jpg" alt="generated image"></td>
+            </tr>
+            
+            <tr>
+                <td><img src="images/testA/00730.jpg" alt="monet image"></td>
+                <td><img src="images/fakeB/00730.jpg" alt="generated image"></td>
+            </tr>
+            
+            <tr>
+                <td><img src="images/testA/00740.jpg" alt="monet image"></td>
+                <td><img src="images/fakeB/00740.jpg" alt="generated image"></td>
+            </tr>
+            
+            <tr>
+                <td><img src="images/testA/00860.jpg" alt="monet image"></td>
+                <td><img src="images/fakeB/00860.jpg" alt="generated image"></td>
+            </tr>
+            
+            <tr>
+                <td><img src="images/testA/00890.jpg" alt="monet image"></td>
+                <td><img src="images/fakeB/00890.jpg" alt="generated image"></td>
+            </tr>
+            
+            <tr>
+                <td><img src="images/testA/00900.jpg" alt="monet image"></td>
+                <td><img src="images/fakeB/00900.jpg" alt="generated image"></td>
+            </tr>
+            
+            <tr>
+                <td><img src="images/testA/00910.jpg" alt="monet image"></td>
+                <td><img src="images/fakeB/00910.jpg" alt="generated image"></td>
+            </tr>
+            
+            <tr>
+                <td><img src="images/testA/00920.jpg" alt="monet image"></td>
+                <td><img src="images/fakeB/00920.jpg" alt="generated image"></td>
+            </tr>
+            
+            <tr>
+                <td><img src="images/testA/00930.jpg" alt="monet image"></td>
+                <td><img src="images/fakeB/00930.jpg" alt="generated image"></td>
+            </tr>
+            
+            <tr>
+                <td><img src="images/testA/00950.jpg" alt="monet image"></td>
+                <td><img src="images/fakeB/00950.jpg" alt="generated image"></td>
+            </tr>
+            
+            <tr>
+                <td><img src="images/testA/00960.jpg" alt="monet image"></td>
+                <td><img src="images/fakeB/00960.jpg" alt="generated image"></td>
+            </tr>
+            
+            <tr>
+                <td><img src="images/testA/00970.jpg" alt="monet image"></td>
+                <td><img src="images/fakeB/00970.jpg" alt="generated image"></td>
+            </tr>
+            
+            <tr>
+                <td><img src="images/testA/01000.jpg" alt="monet image"></td>
+                <td><img src="images/fakeB/01000.jpg" alt="generated image"></td>
+            </tr>
+            
+            <tr>
+                <td><img src="images/testA/01300.jpg" alt="monet image"></td>
+                <td><img src="images/fakeB/01300.jpg" alt="generated image"></td>
+            </tr>
+            
+            <tr>
+                <td><img src="images/testA/01330.jpg" alt="monet image"></td>
+                <td><img src="images/fakeB/01330.jpg" alt="generated image"></td>
+            </tr>
+            
+        </tbody>
+    </table>
     <!-- JQuery -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- Bootstrap tooltips -->
