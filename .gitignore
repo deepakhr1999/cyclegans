@@ -6,5 +6,4 @@
 **/.vs
 .vscode
 checkpoints/
-web/images/
 **.ckpt
