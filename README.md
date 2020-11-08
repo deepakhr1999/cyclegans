@@ -5,8 +5,7 @@
  Monet's painting             |  Generated Photo*
  :-------------------------:|:-------------------------:
  ![](web/images/testA/00030.jpg) | ![](web/images/fakeB/00030.jpg)
- 
-<sup>*weights were downloaded from [here](http://efrosgans.eecs.berkeley.edu/cyclegan/pretrained_models/monet2photo.pth)</sup>
+Checkout more examples [here!](https://htmlpreview.github.io/?https://github.com/deepakhr1999/cyclegans/blob/main/web/index.html) | <sup>*weights were downloaded from [here](http://efrosgans.eecs.berkeley.edu/cyclegan/pretrained_models/monet2photo.pth)</sup>
 
 A Pytorch Lightning implementation of the research paper [Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks](https://arxiv.org/abs/1703.10593). Given two groups of images (we use Monet's paintings and a bunch of real images here), we want a function that takes an image from one domain and translates it to another domain. A vanilla generator maps a latent distribution to a desired output distribution. Instead of a vector sampled from a normal distribution, the cyclegan generator uses an image sampled from the input domain. The generator tries to fool the discriminator, a network that is being trained to classify if an image belongs to the target domain.
 
