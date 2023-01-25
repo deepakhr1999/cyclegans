@@ -111,7 +111,7 @@ class CycleGan(pl.LightningModule):
         mseRealB = self.get_mse_loss(predRealB, 'real')
         
         predFakeB = self.disY(fakeB)
-        mseFakeB = self.get_mse_loss(predFakeA, 'fake')
+        mseFakeB = self.get_mse_loss(predFakeB, 'fake')
         
         # gather all losses
         self.disLoss = 0.5 * (mseFakeA + mseRealA + mseFakeB + mseRealB)
